@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "07684168-c304-4fc6-8b3a-fa46cbb0854a",
+		"name": "Test Api NestJs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4508463"
+	},
+	"item": [
+		{
+			"name": "Raiz",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3002",
+					"host": [
+						"localhost"
+					],
+					"port": "3002"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NThiMDZmMjc0NGUzZGQ0ZDdkM2JiMGEiLCJpYXQiOjE3MDM2MTA1NTksImV4cCI6MTcwMzYxNDE1OX0.uMzLw4CczBU2tRBIqe912VnM_wSPgwmMNupHyjNzOxM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"product_one\",\n    \"price\": 10000,\n    \"category\": \"\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3002/product/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"product",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All products",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NThiMDZmMjc0NGUzZGQ0ZDdkM2JiMGEiLCJpYXQiOjE3MDM2MTA1NTksImV4cCI6MTcwMzYxNDE1OX0.uMzLw4CczBU2tRBIqe912VnM_wSPgwmMNupHyjNzOxM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3002/product/all",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"product",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get product",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NThiMDZmMjc0NGUzZGQ0ZDdkM2JiMGEiLCJpYXQiOjE3MDM2MTA1NTksImV4cCI6MTcwMzYxNDE1OX0.uMzLw4CczBU2tRBIqe912VnM_wSPgwmMNupHyjNzOxM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3002/product/product_one",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"product",
+						"product_one"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"one\",\n    \"password\":\"one\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3002/client/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"client",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NThiMDZmMjc0NGUzZGQ0ZDdkM2JiMGEiLCJpYXQiOjE3MDM2MTMwMzAsImV4cCI6MTcwMzYxNjYzMH0.o6Qfer7oI8MYYNraIxaxqutGgexZNsp6t6qJttX1UNA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"product_one2\",\n    \"price\": 15000,\n    \"category\": \"a\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3002/product/update?productId=658aeb88df163c21e43312bb",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"product",
+						"update"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "658aeb88df163c21e43312bb"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
